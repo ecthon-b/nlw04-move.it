@@ -14,12 +14,11 @@ interface CountdownContextData {
   startCountdown: () => void;
   resetCountdown: () => void;
 }
-
 interface CountdownProviderProps {
   children: ReactNode;
 }
 
-const CountdownContext = createContext({} as CountdownContextData);
+export const CountdownContext = createContext({} as CountdownContextData);
 let countdownTimeout: NodeJS.Timeout;
 
 export function CountdownProvider({ children }: CountdownProviderProps) {
@@ -38,6 +37,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
   function resetCountdown() {
     clearTimeout(countdownTimeout);
     setIsActive(false);
+    setHasFinished(false);
     setTime(0.1 * 60);
   }
 
