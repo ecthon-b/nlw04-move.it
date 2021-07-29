@@ -17,4 +17,5 @@ para densenvolver uma aplicação com o objetivo de ajudar programadores durante
 - js-cookie
 
 <br>
+
 Com 💚 por [Ecthon](https://github.com/ecthon)
